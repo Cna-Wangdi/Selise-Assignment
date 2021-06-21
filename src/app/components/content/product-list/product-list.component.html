@@ -1,0 +1,19 @@
+
+<div class="col">
+<div class="card mb-4 shadow-sm">
+<img class="bd-placeholder-img card-img-top" width="100%" height="200" [src]="productItem.imageurl">
+
+<div class="card-body">
+    <div class="card-body">
+        <strong class="text">{{ productItem.price | currency:'BTN '}}</strong>
+        <p class="card-text">{{ productItem.description }}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+    <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-outline-primary" (click)="addToCart()" text = "Added to cart">Add to cart</button>
+    </div>
+     
+    </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,128 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "Product 2",
+      "description": "product description",
+      "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
+      "qty": 1,
+      "price": 200
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "description": "product description",
+      "imageurl": "https://e7.pngegg.com/pngimages/833/847/png-clipart-football-boots-football-boots.png",
+      "qty": 1,
+      "price": 300
+    },
+    {
+      "id": 5,
+      "productname": "boot set",
+      "description": "very good one",
+      "imageurl": "https://img.favpng.com/0/11/25/nike-mercurial-vapor-football-boot-cleat-sports-shoes-png-favpng-z3vM4k6dMN2z5wiDFUijDr9c6.jpg",
+      "price": "5999",
+      "qty": "11"
+    },
+    {
+      "id": 6,
+      "productname": "another boot",
+      "description": "goog one",
+      "imageurl": "https://banner2.cleanpng.com/20180730/xkz/kisspng-football-boot-adidas-sneakers-cleat-football-boots-5b5ec67b1288b4.7919362415329378510759.jpg",
+      "price": "60000",
+      "qty": "1"
+    },
+    {
+      "id": 7,
+      "productname": "zxdfghj",
+      "description": "sdfgh",
+      "imageurl": "https://eclypsium.com/wp-content/uploads/2020/07/feature_image_boothole.jpg",
+      "price": "1234",
+      "qty": ""
+    }
+  ],
+  "cart": [
+    {
+      "product": {
+        "id": 2,
+        "name": "Product 2",
+        "description": "product description",
+        "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
+        "qty": 1,
+        "price": 200
+      },
+      "id": 3
+    },
+    {
+      "product": {
+        "id": 2,
+        "name": "Product 2",
+        "description": "product description",
+        "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
+        "qty": 1,
+        "price": 200
+      },
+      "id": 4
+    },
+    {
+      "product": {
+        "id": 3,
+        "name": "Product 3",
+        "description": "product description",
+        "imageurl": "https://e7.pngegg.com/pngimages/833/847/png-clipart-football-boots-football-boots.png",
+        "qty": 1,
+        "price": 300
+      },
+      "id": 5
+    },
+    {
+      "product": {
+        "id": 3,
+        "name": "Product 3",
+        "description": "product description",
+        "imageurl": "https://e7.pngegg.com/pngimages/833/847/png-clipart-football-boots-football-boots.png",
+        "qty": 1,
+        "price": 300
+      },
+      "id": 6
+    },
+    {
+      "product": {
+        "id": 2,
+        "name": "Product 2",
+        "description": "product description",
+        "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
+        "qty": 1,
+        "price": 200
+      },
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "name": "cnawangdi",
+      "email": "cna@gmail.com",
+      "username": "cna",
+      "password": "12345",
+      "confirmpassword": "12345",
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
