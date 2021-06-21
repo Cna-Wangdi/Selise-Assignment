@@ -1,8 +1,8 @@
 <div *ngIf=" cartItems.length === 0" class="alert alert-info">No Items Added</div>
 
-    
+
 <div *ngIf=" cartItems.length > 0" class="container">
-    
+
     <ul class="list-group-item" *ngFor= "let item of cartItems; let i = index">
         <li >
         <div class="row">
@@ -10,24 +10,19 @@
         </div>
             <div class="row">
             <div class="col-sm-2">
-                <button class="btn btn-outline-primary" (click)="addOneMore(i)">Add</button>
-                <button class="btn btn-outline-success" [disabled]="disableRemoveBtn" (click)="deleteOne(i)"> Delete </button>
+                <button class="btn btn-outline-primary" (click)="addProductQuantity(i)">Add</button>
+                <button class="btn btn-outline-success" [disabled]="disableRemoveBtn" (click)="deleteProductQuantity(i)"> Delete </button>
             </div>
             <div class="col">
-                <button class ="btn btn-outline-secondary" (click)='removeProduct(item.id)'>Remove</button>
+                <button class ="btn btn-outline-secondary" (click)='deleteProduct(item.id)'>Remove</button>
             </div>
         </div>
-        
+
 
         </li>
-       
+
     </ul>
     <li class="list-group-item">
         <strong>Total:</strong>  {{cartTotal}}
     </li>
 </div>
-
-
-
-
-

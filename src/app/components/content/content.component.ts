@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/services/product.service'; 
+import { ProductService } from 'src/app/services/product.service';
 import { Products } from 'src/app/models/products';
+import {PostProductService} from "../../services/post-product.service";
 
 @Component({
   selector: 'app-content',
@@ -9,14 +10,13 @@ import { Products } from 'src/app/models/products';
 })
 
 export class ContentComponent implements OnInit {
-  // @Input() cartItem: any
-  productList: Products[]
+  productList: Products[];
 
-  constructor( private productService: ProductService) { }
+  constructor(private productService: PostProductService) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((products) => {
-      this.productList = products
+      this.productList = products;
     })
   }
 

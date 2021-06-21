@@ -39,6 +39,14 @@
       "imageurl": "https://eclypsium.com/wp-content/uploads/2020/07/feature_image_boothole.jpg",
       "price": "1234",
       "qty": ""
+    },
+    {
+      "id": 8,
+      "productname": "beatiful boot",
+      "description": "very beaur=tiful",
+      "imageurl": "djask",
+      "price": "123",
+      "qty": "2"
     }
   ],
   "cart": [
@@ -96,33 +104,120 @@
         "price": 200
       },
       "id": 7
+    },
+    {
+      "product": {
+        "id": 2,
+        "name": "Product 2",
+        "description": "product description",
+        "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
+        "qty": 1,
+        "price": 200
+      },
+      "id": 8
+    },
+    {
+      "product": {
+        "id": 2,
+        "name": "Product 2",
+        "description": "product description",
+        "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
+        "qty": 1,
+        "price": 200
+      },
+      "id": 9
     }
   ],
   "users": [
     {
       "name": "cnawangdi",
       "email": "cna@gmail.com",
-      "username": "cna",
-      "password": "12345",
-      "confirmpassword": "12345",
+      "user_name": "admin",
+      "password": "admin123",
+      "role": "admin",
+      "confirm_password": "admin123",
       "id": 1
-    }
-  ],
-  "posts": [
+    },
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "sonam",
+      "email": "sonam@gmail.com",
+      "user_name": "sonam",
+      "password": "sonam124",
+      "confirm_password": "sonam333",
+      "role": "user",
+      "id": 2
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "sonam",
+      "email": "sonam@gmail.com",
+      "user_name": "sonam",
+      "password": "sonam124",
+      "confirm_password": "sonam333",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "name": "sonam",
+      "email": "sonam@gmail.com",
+      "user_name": "sonam",
+      "password": "sonam124",
+      "confirm_password": "https://bitbucket.org/selise07/pq-mobile/pull-requests/176/pq-rush-21-06-2021-eshop",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "name": "sonam",
+      "email": "sonam@gmail.com",
+      "user_name": "sonam",
+      "password": "sonam",
+      "confirm_password": "sonam",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "name": "tashi",
+      "email": "tash@gmail.com",
+      "user_name": "tashi",
+      "password": "tashi123",
+      "confirm_password": "tashi124",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "name": "sonam",
+      "email": "son@gmail.com",
+      "user_name": "askdf",
+      "password": "1234",
+      "confirm_password": "1234",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "name": "sonam",
+      "email": "son@gmail.com",
+      "user_name": "askdf",
+      "password": "1234",
+      "confirm_password": "1234",
+      "role": "user",
+      "id": 8
+    },
+    {
+      "name": "aslkdf",
+      "email": "asf@gmail.com",
+      "user_name": "acw",
+      "password": "123",
+      "confirm_password": "456",
+      "role": "user",
+      "id": 9
+    },
+    {
+      "name": "aslkdf",
+      "email": "asf@gmail.com",
+      "user_name": "acw",
+      "password": "123",
+      "confirm_password": "456",
+      "role": "user",
+      "id": 10
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

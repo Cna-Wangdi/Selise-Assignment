@@ -12,20 +12,16 @@ const routes: Routes = [
   {
     path: '',
     component: SignInComponent
-
   },
   {
     path: 'home',
     component: ContentComponent,
-    canActivate: [AuthGuard]
-
   },
   {
     path:'cart',
     component: CartComponent,
-    canActivate: [AuthGuard]
   },
-  
+
   {
      path:'addproduct',
      component: AddProductComponent,

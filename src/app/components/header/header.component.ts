@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthenticationService } from 'src/app/services/authentication.service';
+
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthenticationService} from 'src/app/services/authentication.service';
+import {User} from "../../models/user-details";
 
 
 @Component({
@@ -9,18 +11,18 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(private router: Router,public authenticationService: AuthenticationService) { }
+  adminInfo: User;
+  constructor(private router: Router, public authenticationService: AuthenticationService) {
+  }
 
   ngOnInit(): void {
   }
 
-  
-  redirectToSignIn():void{
-    this.router.navigateByUrl('/signin')
+  redirectToSignIn(): void {
+    this.router.navigateByUrl('/signin');
   }
-  
-  redirectToAddProduct():void{
-    this.router.navigateByUrl("/addproduct")
+
+  redirectToAddProduct(): void {
+    this.router.navigateByUrl("/addproduct");
   }
 }

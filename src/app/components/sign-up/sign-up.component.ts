@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SignupService } from 'src/app/services/signup.service'
 
 function passwordsMatchValidator(form){
@@ -20,33 +21,36 @@ function passwordsMatchValidator(form){
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  
-  signUp: FormGroup
+
+  signUpForm: FormGroup;
+
   constructor(
     private builder: FormBuilder,
-    private signupService: SignupService    
+    private signupService: SignupService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
-    this.buildForm() 
+    this.buildSignUpForm();
   }
 
-  buildForm(){
-    this.signUp = this.builder.group({
+  buildSignUpForm(): void {
+    this.signUpForm = this.builder.group({
       name:['', Validators.required],
       email:['', [Validators.required, Validators.email]],
-      username:['', Validators.required],
+      user_name:['', Validators.required],
       password:['', Validators.required],
-      confirmpassword:'',
+      confirm_password:'',
+      role: 'user',
       validators:passwordsMatchValidator
     })
   }
 
-  register(){
-    console.log(this.signUp.value)
-    this.signupService.registerUser(this.signUp.value).subscribe((data)=> {
-      console.log(data)
-    })
+  register(): void {
+    this.signupService.registerUser(this.signUpForm.value).subscribe( res => {
+      this.signUpForm.reset();
+      this.router.navigateByUrl('');
+    });
   }
 
 }

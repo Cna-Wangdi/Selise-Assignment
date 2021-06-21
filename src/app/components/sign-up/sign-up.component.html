@@ -5,64 +5,65 @@
                 <h3>SignUp</h3>
             </div>
             <div class="card-body">
-                <form [formGroup] = "signUp" (ngSubmit)="register()">
+                <form [formGroup] = "signUpForm" (ngSubmit)="register()">
                     <div class="form-group">
                         <label for="name"> Name</label>
-                        <input 
+                        <input
                             id="name"
-                            class="form-control" 
-                            [ngClass]="{'is-invalid': signUp.get('name').touched && signUp.get('name').invalid}"
+                            class="form-control"
+                            [ngClass]="{'is-invalid': signUpForm.get('name').touched && signUpForm.get('name').invalid}"
                             formControlName="name"
                         />
                         <span class="invalid-feedback"> Name is required</span>
                     </div>
                     <div class="form-group">
                         <label for="email"> Email </label>
-                        <input 
-                        type= "email " 
-                        id="email" 
+                        <input
+                        type= "email "
+                        id="email"
                         class="form-control"
-                        [ngClass]="{'is-invalid': signUp.get('email').touched && signUp.get('email').invalid}"
+                        [ngClass]="{'is-invalid': signUpForm.get('email').touched && signUpForm.get('email').invalid}"
                         formControlName="email"/>
-                        <span class="invalid-feedback"> 
-                            <span *ngIf="signUp.get('email').hasError('required')">Email is required</span>
-                            <span *ngIf="signUp.get('email').hasError('email')">Invalid Email</span>
+                        <span class="invalid-feedback">
+                            <span *ngIf="signUpForm.get('email').hasError('required')">Email is required</span>
+                            <span *ngIf="signUpForm.get('email').hasError('email')">Invalid Email</span>
                         </span>
                     </div>
                     <div class="form-group">
-                        <label for="username"> Username</label>
-                        <input id="username" 
-                            class="form-control" 
-                            [ngClass]="{'is-invalid': signUp.get('username').touched && signUp.get('username').invalid}"
-                            formControlName="username" 
+                        <label for="username">Username</label>
+                        <input id="username"
+                            class="form-control"
+                            [ngClass]="{'is-invalid': signUpForm.get('user_name').touched && signUpForm.get('user_name').invalid}"
+                            formControlName="user_name"
                         />
-                        <span class="invalid-feedback"> Username is required</span>
+                        <span class="invalid-feedback">Username is required</span>
                     </div>
                     <div class="form-group mt-2">
                         <label for="password"> Password</label>
-                        <input type="password" 
+                        <input type="password"
                             id="password"
-                            class="form-control" 
-                            [ngClass]="{'is-invalid': signUp.get('password').touched && signUp.get('password').invalid}"
+                            class="form-control"
+                            [ngClass]="{'is-invalid': signUpForm.get('password').touched && signUpForm.get('password').invalid}"
                             formControlName="password"
                         />
                         <span class="invalid-feedback"> Password is required</span>
                     </div>
                     <div class="form-group mt-2">
                         <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" 
-                            id="confirmPassword" 
-                            class="form-control"  
-                            [ngClass]="{'is-invalid': signUp.get('confirmpassword').touched && signUp.get('confirmpassword').invalid}"
-                            formControlName="confirmpassword"
+                        <input type="password"
+                            id="confirmPassword"
+                            class="form-control"
+                            [ngClass]="{'is-invalid': signUpForm.get('confirm_password').touched && signUpForm.get('confirm_password').invalid}"
+                            formControlName="confirm_password"
                         />
                         <span class="invalid-feedback"> Password must match</span>
                     </div>
-                    
-                    <button class="btn btn-primary w-100 mt-2" [disabled]="signUp.invalid"> SignUp </button>
+
+                    <button class="btn btn-primary w-100 mt-2" [disabled]="signUpForm.invalid" (click)="register()"> SignUp </button>
+                  <button class="btn btn-primary w-100 mt-2" routerLink=""> SignIn </button>
+
                 </form>
              </div>
         </div>
     </div>
 </div>
-

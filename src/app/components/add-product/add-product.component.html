@@ -1,55 +1,49 @@
 <div class="container">
-<form [formGroup]="formValue" >
-    
-  <div class="form-group row">
-      <label for="number" class="col-sm-2 col-form-label">Id</label>
-      <div class="col-sm-4">
-      <input type="number" formControlName="id" class="form-control" id="number" placeholder="Id">
-     </div>
-   </div>
-   <br>
+  <form [formGroup]="productForm">
     <div class="form-group row">
-      <label for="productname"  class="col-sm-2 col-form-label">Product Name</label>
+      <label for="productname" class="col-sm-2 col-form-label">Product Name</label>
       <div class="col-sm-4">
-      <input type="value" formControlName="productname" class="form-control" id="productname" placeholder="Product Name">
+        <input type="value" formControlName="productname" class="form-control" id="productname"
+               placeholder="Product Name">
+      </div>
     </div>
-  </div>
-  <br>
-    <div class="form-group row">
-      <label for="description"  class="col-sm-2 col-form-label">Description</label>
-      <div class="col-sm-4">
-      <input type="dvalue" formControlName="description" class="form-control" id="description" placeholder="Description">
-    </div>
-  </div>
     <br>
     <div class="form-group row">
-      <label for="imageurl"  class="col-sm-2 col-form-label"> Image Url</label>
+      <label for="description" class="col-sm-2 col-form-label">Description</label>
       <div class="col-sm-4">
-      <input type="value" formControlName="imageurl" class="form-control" id="imageurl" placeholder="Image Url">
+        <input type="dvalue" formControlName="description" class="form-control" id="description"
+               placeholder="Description">
+      </div>
     </div>
-  </div>
-  <br>
-    <div class="form-group row">
-      <label for="price"  class="col-sm-2 col-form-label">Price</label>
-      <div class="col-sm-4">
-      <input type="value" formControlName="price" class="form-control" id="price" placeholder="Price">
-    </div>
-  </div>
     <br>
     <div class="form-group row">
-      <label for="qty"  class="col-sm-2 col-form-label">Quantity</label>
+      <label for="imageurl" class="col-sm-2 col-form-label"> Image Url</label>
       <div class="col-sm-4">
-      <input type="value" formControlName="qty" class="form-control" id="qty" placeholder="Qty">
-    </div>
+        <input type="value" formControlName="imageurl" class="form-control" id="imageurl" placeholder="Image Url">
+      </div>
     </div>
     <br>
-   <div class="row">
+    <div class="form-group row">
+      <label for="price" class="col-sm-2 col-form-label">Price</label>
+      <div class="col-sm-4">
+        <input type="value" formControlName="price" class="form-control" id="price" placeholder="Price">
+      </div>
+    </div>
+    <br>
+    <div class="form-group row">
+      <label for="qty" class="col-sm-2 col-form-label">Quantity</label>
+      <div class="col-sm-4">
+        <input type="value" formControlName="qty" class="form-control" id="qty" placeholder="Qty">
+      </div>
+    </div>
+    <br>
+    <div class="row">
       <div class="col"></div>
-     <div class="col-md-7">
-      <button type="submit" class="btn btn-primary" (click)="addToProduct()">Add</button>
+      <div class="col-md-7">
+        <button type="submit" class="btn btn-primary" (click)="addToProduct()">Add</button>
 
-     </div>
+      </div>
     </div>
-  
+
   </form>
 </div>

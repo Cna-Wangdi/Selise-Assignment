@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Products } from 'src/app/models/products';
-import { CartItemService } from 'src/app/services/cart-item.service';
-import { CartService } from 'src/app/services/cart.service';
 
-const cartUrl = 'http://localhost:3000/cart'
+import {Component, OnInit} from '@angular/core';
+import {Products} from 'src/app/models/products';
+import {PostProductService} from "../../services/post-product.service";
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -14,62 +12,54 @@ export class CartComponent implements OnInit {
   cartItems = [];
   cartTotal = 0;
   disableRemoveBtn = false;
-  constructor( 
-    private msg: CartService,
-    private cartItemService: CartItemService,
-    private http:HttpClient,
-  ) { }
 
-  ngOnInit(): void { 
-    this.addProducts()
+  constructor( private productService: PostProductService) {}
+
+  ngOnInit(): void {
+    this.addProducts();
   }
 
-  addProducts(){
-    this.cartItemService.boughtProducts().subscribe(product => { 
+  addProducts(): void {
+    this.productService.boughtProducts().subscribe(product => {
       this.cartItems = product;
-      this.calculateCartTotal()
+      this.calculateCartTotal();
     })
   }
 
-  handleSubscription(){
-    this.msg.getItem().subscribe((product:Products) => {
-      this.calculateCartTotal()
-  })
-  }
-
-   calculateCartTotal(): void{ 
-    this.cartTotal = 0
-    this.cartItems.forEach ( vo => {
-        this.cartTotal += vo.product.price * vo.product.qty;
+  calculateCartTotal(): void {
+    this.cartTotal = 0;
+    this.cartItems.forEach(vo => {
+      this.cartTotal += vo.product.price * vo.product.qty;
     });
   }
 
-  removeProduct(index: number): void { 
-    // console.log(index)
-        this.cartItemService.deleteCartItem(index).subscribe(response => {
-          this.cartItems.splice(index);
-          this.addProducts()
-        })
-  }
-  
-  addOneMore(index: number): void{
-   this.disableRemoveBtn = false;
-   console.log(this.cartItems[index].product.qty)
-   this.cartItems[index].product.qty+=1
-   this.calculateCartTotal();
-   
+  deleteProduct(index: number): void {
+    this.productService.deleteCartItem(index).subscribe(response => {
+      this.cartItems.splice(index);
+      this.addProducts()
+    })
   }
 
-  deleteOne(index: number): void { debugger;
-    // console.log(this.cartItems[index].product.qty)
+  addProductQuantity(index: number): void {
+    this.disableRemoveBtn = false;
+    this.cartItems[index].product.qty += 1
+    this.calculateCartTotal();
+  }
 
-    if(this.cartItems[index].product.qty != 1){
-     this.cartItems[index].product.qty-=1
-     this.disableRemoveBtn = false;
-    }else{
-     this.disableRemoveBtn = true;
-    } 
-    this.calculateCartTotal()
-   }
+  deleteProductQuantity(index: number): void {
+    if (this.cartItems[index].product.qty != 1) {
+      this.cartItems[index].product.qty -= 1
+      this.disableRemoveBtn = false;
+    } else {
+      this.disableRemoveBtn = true;
+    }
+    this.calculateCartTotal();
+  }
+
+  handleSubscription(): void {
+    this.productService.getItem().subscribe((product: Products) => {
+      this.calculateCartTotal();
+    })
+  }
 
 }

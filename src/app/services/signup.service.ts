@@ -1,20 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {User} from "../models/user-details";
 
-const userUrl= "http://localhost:3000/users"
 
 @Injectable({
   providedIn: 'root'
 })
 export class SignupService {
 
+   userUrl= "http://localhost:3000/users"
+
   constructor( private http: HttpClient) { }
 
-  registerUser(data){
-    return this.http.post(userUrl,data)
+  registerUser(user: User): Observable<any>{
+    return this.http.post(this.userUrl,user);
   }
-  fetchUserDetail(): Observable<any>{
-    return this.http.get<any>(userUrl)
+
+  fetchUserDetail(): Observable<User[]>{
+    return this.http.get<User[]>(this.userUrl);
   }
 }
