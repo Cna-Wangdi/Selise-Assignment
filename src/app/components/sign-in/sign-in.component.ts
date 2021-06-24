@@ -21,7 +21,7 @@ export class SignInComponent implements OnInit {
               private formBuilder: FormBuilder) {
   }
 
-  areCredentialsInvalid = false;
+  areCredentialsInvalid: boolean = false;
 
   ngOnInit(): void {
     this.authenticationService.getUSerDetails();

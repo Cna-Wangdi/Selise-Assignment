@@ -6,23 +6,33 @@
     <ul class="list-group-item" *ngFor= "let item of cartItems; let i = index">
         <li >
         <div class="row">
-            {{ item.product.name }}  {{ item.product.price }} x  {{ item.product.qty}} : {{ item.product.price*item.product.qty }}
-        </div>
-            <div class="row">
-            <div class="col-sm-2">
-                <button class="btn btn-outline-primary" (click)="addProductQuantity(i)">Add</button>
-                <button class="btn btn-outline-success" [disabled]="disableRemoveBtn" (click)="deleteProductQuantity(i)"> Delete </button>
-            </div>
             <div class="col">
-                <button class ="btn btn-outline-secondary" (click)='deleteProduct(item.id)'>Remove</button>
+                 <img [src]="item.product.imageurl" class = "img-thumbnail" width="75%" height="50%" [alt]="item.product.name">
+                 <button class="btn btn-outline-primary btn-space" (click)="addProductQuantity(i)">Add </button>     
+                 <button class="btn btn-outline-success btn-space" [disabled]="disableRemoveBtn" (click)="deleteProductQuantity(i)"> Delete </button>
+             </div>
+             <div class="col-md-5">
+                 <p> Poduct Name : {{ item.product.name }}</p>   
+                 <p> Cost : {{ item.product.price }} </p>   
+                 <p> Quantity : {{ item.product.qty}} </p>  
+                 <p> Total : {{ item.product.price*item.product.qty }}</p>
+            </div>
+
+            <div class="col">
+                <button class ="btn btn-outline-danger btn-top"  (click)='deleteProduct(item.id)'>Remove</button>
             </div>
         </div>
-
-
-        </li>
-
+         </li>
     </ul>
     <li class="list-group-item">
-        <strong>Total:</strong>  {{cartTotal}}
+        <div class="row">
+            <div class="col">
+                <strong>Grand Total:</strong>  {{cartTotal}}
+            </div>  
+            <div class="col-md-5"></div>
+            <div class="col">
+                <button type="button" class="btn btn-success">Purchase</button>
+            </div>
+        </div>
     </li>
 </div>

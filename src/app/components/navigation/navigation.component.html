@@ -9,38 +9,38 @@
   <hr>
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item">
-      <a class="nav-link " routerLink="/" (click)="homePage()">
+      <a class="nav-link " (click)="homePage()">
         HOME
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link ">
+      <a  class="nav-link " >
         BOOTS
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link ">
+      <a class="nav-link ">
         SHIRTS
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link ">
+      <a class="nav-link ">
         BALL
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link ">
+      <a class="nav-link ">
         SOCKS
       </a>
       <hr>
     </li>
 
-    <a class="me-3 pt-2 text-dark text-decoration-none text-center" (click)="redirectToCart()"><strong>Cart</strong></a>
+    <button class="nav-link text-dark text-center" (click)="redirectToCart()"><strong>Cart</strong></button>
 
     <li>
-      <a class="nav-link" (click)="logout()">
+      <button class="nav-link" (click)="logout()">
         Logout
-      </a>
+      </button>
       <hr>
     </li>
   </ul>

@@ -10,7 +10,8 @@ import {AuthenticationService} from "../../services/authentication.service";
 export class NavigationComponent implements OnInit {
 
   constructor(private router: Router,
-              private authenticationService: AuthenticationService) {
+              private authenticationService: AuthenticationService,
+              ) {
   }
 
   ngOnInit(): void {
@@ -26,7 +27,12 @@ export class NavigationComponent implements OnInit {
 
   logout(): void {
     this.router.navigateByUrl('');
-    this.authenticationService.setAuthenticate(false);''
+    this.authenticationService.setAuthenticate(false);
+    this.authenticationService.isAdmin = false
+    this.authenticationService.isUser = false
+    
+    
+
   }
 
 }

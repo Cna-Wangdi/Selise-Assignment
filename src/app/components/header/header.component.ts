@@ -17,11 +17,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  redirectToSignIn(): void {
-    this.router.navigateByUrl('/signin');
-  }
-
+  
   redirectToAddProduct(): void {
     this.router.navigateByUrl("/addproduct");
   }

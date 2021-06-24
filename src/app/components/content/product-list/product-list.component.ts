@@ -10,6 +10,9 @@ import {PostProductService} from "../../../services/post-product.service";
 })
 export class ProductListComponent implements OnInit {
   @Input() productItem: Products;
+   text = "Add to Cart"
+  disableButton: boolean = false
+
 
   constructor(
     private msg: CartService,
@@ -22,6 +25,9 @@ export class ProductListComponent implements OnInit {
   addToCart(): void {
     this.productService.addProductToCart(this.productItem).subscribe(() =>{
        this.productService.sendItem(this.productItem);
+       this.disableButton = true
+       this.text = "Added To Cart"
+
     });
   }
 

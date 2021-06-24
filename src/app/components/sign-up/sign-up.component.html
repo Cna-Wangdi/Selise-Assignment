@@ -56,10 +56,9 @@
                             [ngClass]="{'is-invalid': signUpForm.get('confirm_password').touched && signUpForm.get('confirm_password').invalid}"
                             formControlName="confirm_password"
                         />
-                        <span class="invalid-feedback"> Password must match</span>
                     </div>
 
-                    <button class="btn btn-primary w-100 mt-2" [disabled]="signUpForm.invalid" (click)="register()"> SignUp </button>
+                    <button class="btn btn-primary w-100 mt-2" [disabled]="(isPasswordConfirmed)" (click)="register()"> SignUp </button>
                   <button class="btn btn-primary w-100 mt-2" routerLink=""> SignIn </button>
 
                 </form>

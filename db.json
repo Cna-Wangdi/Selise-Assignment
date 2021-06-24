@@ -49,85 +49,7 @@
       "qty": "2"
     }
   ],
-  "cart": [
-    {
-      "product": {
-        "id": 2,
-        "name": "Product 2",
-        "description": "product description",
-        "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
-        "qty": 1,
-        "price": 200
-      },
-      "id": 3
-    },
-    {
-      "product": {
-        "id": 2,
-        "name": "Product 2",
-        "description": "product description",
-        "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
-        "qty": 1,
-        "price": 200
-      },
-      "id": 4
-    },
-    {
-      "product": {
-        "id": 3,
-        "name": "Product 3",
-        "description": "product description",
-        "imageurl": "https://e7.pngegg.com/pngimages/833/847/png-clipart-football-boots-football-boots.png",
-        "qty": 1,
-        "price": 300
-      },
-      "id": 5
-    },
-    {
-      "product": {
-        "id": 3,
-        "name": "Product 3",
-        "description": "product description",
-        "imageurl": "https://e7.pngegg.com/pngimages/833/847/png-clipart-football-boots-football-boots.png",
-        "qty": 1,
-        "price": 300
-      },
-      "id": 6
-    },
-    {
-      "product": {
-        "id": 2,
-        "name": "Product 2",
-        "description": "product description",
-        "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
-        "qty": 1,
-        "price": 200
-      },
-      "id": 7
-    },
-    {
-      "product": {
-        "id": 2,
-        "name": "Product 2",
-        "description": "product description",
-        "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
-        "qty": 1,
-        "price": 200
-      },
-      "id": 8
-    },
-    {
-      "product": {
-        "id": 2,
-        "name": "Product 2",
-        "description": "product description",
-        "imageurl": "https://www.clipartkey.com/mpngs/m/101-1010446_football-boots-png-clipart-nike-football-shoes-png.png",
-        "qty": 1,
-        "price": 200
-      },
-      "id": 9
-    }
-  ],
+  "cart": [],
   "users": [
     {
       "name": "cnawangdi",
@@ -139,85 +61,13 @@
       "id": 1
     },
     {
-      "name": "sonam",
-      "email": "sonam@gmail.com",
-      "user_name": "sonam",
-      "password": "sonam124",
-      "confirm_password": "sonam333",
+      "name": "Sonam Wangdi",
+      "email": "cna@gmail.com",
+      "user_name": "cna",
+      "password": "123",
+      "confirm_password": "123",
       "role": "user",
       "id": 2
-    },
-    {
-      "name": "sonam",
-      "email": "sonam@gmail.com",
-      "user_name": "sonam",
-      "password": "sonam124",
-      "confirm_password": "sonam333",
-      "role": "user",
-      "id": 3
-    },
-    {
-      "name": "sonam",
-      "email": "sonam@gmail.com",
-      "user_name": "sonam",
-      "password": "sonam124",
-      "confirm_password": "https://bitbucket.org/selise07/pq-mobile/pull-requests/176/pq-rush-21-06-2021-eshop",
-      "role": "user",
-      "id": 4
-    },
-    {
-      "name": "sonam",
-      "email": "sonam@gmail.com",
-      "user_name": "sonam",
-      "password": "sonam",
-      "confirm_password": "sonam",
-      "role": "user",
-      "id": 5
-    },
-    {
-      "name": "tashi",
-      "email": "tash@gmail.com",
-      "user_name": "tashi",
-      "password": "tashi123",
-      "confirm_password": "tashi124",
-      "role": "user",
-      "id": 6
-    },
-    {
-      "name": "sonam",
-      "email": "son@gmail.com",
-      "user_name": "askdf",
-      "password": "1234",
-      "confirm_password": "1234",
-      "role": "user",
-      "id": 7
-    },
-    {
-      "name": "sonam",
-      "email": "son@gmail.com",
-      "user_name": "askdf",
-      "password": "1234",
-      "confirm_password": "1234",
-      "role": "user",
-      "id": 8
-    },
-    {
-      "name": "aslkdf",
-      "email": "asf@gmail.com",
-      "user_name": "acw",
-      "password": "123",
-      "confirm_password": "456",
-      "role": "user",
-      "id": 9
-    },
-    {
-      "name": "aslkdf",
-      "email": "asf@gmail.com",
-      "user_name": "acw",
-      "password": "123",
-      "confirm_password": "456",
-      "role": "user",
-      "id": 10
     }
   ]
 }
