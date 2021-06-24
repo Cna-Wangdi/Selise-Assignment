@@ -40,15 +40,15 @@ export class CartComponent implements OnInit {
     })
   }
 
-  addProductQuantity(index: number): void {
+  addProductQuantity(index: number): void { debugger;
     this.disableRemoveBtn = false;
-    this.cartItems[index].product.qty += 1
+    (this.cartItems[index].product.qty) = +(this.cartItems[index].product.qty) +  1;
     this.calculateCartTotal();
   }
 
   deleteProductQuantity(index: number): void {
     if (this.cartItems[index].product.qty != 1) {
-      this.cartItems[index].product.qty -= 1
+      this.cartItems[index].product.qty = +(this.cartItems[index].product.qty) - 1;
       this.disableRemoveBtn = false;
     } else {
       this.disableRemoveBtn = true;

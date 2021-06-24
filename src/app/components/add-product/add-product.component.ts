@@ -21,16 +21,16 @@ export class AddProductComponent implements OnInit {
 
   buildProductForm(): void {
     this.productForm = this.formBuilder.group({
-      id: [''],
-      productname: [''],
-      description: [''],
-      imageurl: [''],
-      price: [''],
-      qty: ['']
+      id: [undefined],
+      productname: [undefined],
+      description: [undefined],
+      imageurl: [undefined],
+      price: [undefined],
+      qty: [undefined]
     })
   }
 
-  addToProduct(): void {
+  addToProduct(): void { debugger
     this.productService.createProduct(this.productForm.value).subscribe(res => {
       this.productForm.reset()
     });
